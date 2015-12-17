@@ -1,8 +1,9 @@
 import {thinky} from 'standardstream'
 
 var type = thinky.type
+let table = 'bitcoin_prices'
 
-var BitcoinPrice = thinky.createModel('bitcoin_prices', {
+var BitcoinPrice = thinky.createModel(table, {
   bitstamp: String,
   btce: String,
   bitfinex: String,
@@ -15,4 +16,5 @@ var BitcoinPrice = thinky.createModel('bitcoin_prices', {
   status: type.string().enum(['A', 'D'])
 })
 
+export {table}
 export default BitcoinPrice
